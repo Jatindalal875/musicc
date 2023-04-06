@@ -17,34 +17,34 @@ from pyrogram import filters
 load_dotenv()
 
 # Get it from my.telegram.org
-API_ID = int(getenv("API_ID", "16087936"))
-API_HASH = getenv("API_HASH", "74bf4fd02b61211f9cdae8a216bc96c3")
+API_ID = int(getenv("API_ID", "19413864"))
+API_HASH = getenv("API_HASH", "9e33b9fdf4b840a508be5706104737eb")
 
 ## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN", "5811190967:AAGkGJJSlH3qKheCIG8eObOsAty3giAE2bs")
+BOT_TOKEN = getenv("BOT_TOKEN", "5562514845:AAEyeafD0gcAgInwQj8v2WtUk-QtqNTDpv8")
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://hunter:hunterop@cluster0.yffzly7.mongodb.net/?retryWrites=true&w=majority")
 
 # Custom max audio(music) duration for voice chat. set DURATION_LIMIT in variables with your own time(mins), Default to 60 mins.
 DURATION_LIMIT_MIN = int(
-    getenv("DURATION_LIMIT", "120")
+    getenv("DURATION_LIMIT", "180000000000000000000000")
 )  # Remember to give value in Minutes
 
 # Duration Limit for downloading Songs in MP3 or MP4 format from bot
 SONG_DOWNLOAD_DURATION = int(
-    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "180")
+    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "180000000000000000000000")
 )  # Remember to give value in Minutes
 
 # You'll need a Private Group ID for this.
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001428911778"))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001821175020"))
 
 # A name for your Music bot.
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "𝗜𝗡𝗙𝗜𝗡𝗜𝗧𝗬 𝗠𝗨𝗦𝗜𝗖 𝗕𝗢𝗧")
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "𝗧𝗕𝗛 ✦ 𝗠𝗨𝗦𝗜𝗖 ")
 
 # Your User ID.
 OWNER_ID = list(
-    map(int, getenv("OWNER_ID", "5635825262").split())
+    map(int, getenv("OWNER_ID", "5388906652").split())
 )  # Input type must be interger
 
 # Get it from http://dashboard.heroku.com/account
@@ -56,7 +56,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 # For customized or modified Repository
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/Jatindalal875/YukkiMusicBot",
+    "https://github.com/Jatindalal875/musicc",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
@@ -65,23 +65,23 @@ GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 # Only  Links formats are  accepted for this Var value.
 SUPPORT_CHANNEL = getenv(
-    "SUPPORT_CHANNEL", "https://t.me/FallenXMusic"
+    "SUPPORT_CHANNEL", "https://t.me/THE_BROTHERHOOD_COUNCIL"
 )  # Example:- https://t.me/TheYukki
 SUPPORT_GROUP = getenv(
-    "SUPPORT_GROUP", "https://t.me/INFINITY_BOT_SUPPORT09"
+    "SUPPORT_GROUP", "https://t.me/EAGLE_MAFIA_CLUB"
 )  # Example:- https://t.me/YukkiSupport
 
 # Set it in True if you want to leave your assistant after a certain amount of time. [Set time via AUTO_LEAVE_ASSISTANT_TIME]
-AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", yes)
+AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", True)
 
 # Time after which you're assistant account will leave chats automatically.
 AUTO_LEAVE_ASSISTANT_TIME = int(
-    getenv("ASSISTANT_LEAVE_TIME", "5400")
+    getenv("ASSISTANT_LEAVE_TIME", "180")
 )  # Remember to give value in Seconds
 
 # Time after which bot will suggest random chats about bot commands.
 AUTO_SUGGESTION_TIME = int(
-    getenv("AUTO_SUGGESTION_TIME", "5400")
+    getenv("AUTO_SUGGESTION_TIME", "120")
 )  # Remember to give value in Seconds
 
 # Set it True if you want to delete downloads after the music playout ends from your downloads folder
@@ -100,20 +100,20 @@ YOUTUBE_DOWNLOAD_EDIT_SLEEP = int(getenv("YOUTUBE_EDIT_SLEEP", "3"))
 TELEGRAM_DOWNLOAD_EDIT_SLEEP = int(getenv("TELEGRAM_EDIT_SLEEP", "5"))
 
 # Your Github Repo.. Will be shown on /start Command
-GITHUB_REPO = getenv("GITHUB_REPO", "https://telegra.ph/file/dfb5ad5893ebc6ef81366.jpg")
+GITHUB_REPO = getenv("GITHUB_REPO", "https://te.legra.ph/file/a0a72d2971424c77000e3.jpg")
 
 # Spotify Client.. Get it from https://developer.spotify.com/dashboard
-SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", None)
-SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
+SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "c15a0fbfb2234180b452281e8afc26cd")
+SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "997b0914cf444a3b994efd7cc0ca443d")
 
 # Maximum number of video calls allowed on bot. You can later set it via /set_video_limit on telegram
-VIDEO_STREAM_LIMIT = int(getenv("VIDEO_STREAM_LIMIT", "10"))
+VIDEO_STREAM_LIMIT = int(getenv("VIDEO_STREAM_LIMIT", "20"))
 
 # Maximum Limit Allowed for users to save playlists on bot's server
-SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "30"))
+SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "500"))
 
 # MaximuM limit for fetching playlist's track from youtube, spotify, apple links.
-PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "25"))
+PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "500"))
 
 # Cleanmode time after which bot will delete its old messages from chats
 CLEANMODE_DELETE_MINS = int(
@@ -137,20 +137,21 @@ TG_VIDEO_FILESIZE_LIMIT = int(
 # Refer to https://i.postimg.cc/Bbg3LQTG/image.png
 SET_CMDS = getenv("SET_CMDS", False)
 
-# You'll need a Pyrogram String Session for these vars. Generate String from our session generator bot @YukkiStringBot
-STRING1 = getenv("STRING_SESSION", "BQAMsVVGoAb7qHLaZNqoT-g_vs7_KncVWfpmShDJM6KpqdRmwHrrq635p5mSU61Tj7OduQVpnoNUAufXsWSGAz_uPKXTUI1DM44AaCJuPr4VDC24q9PVjgdtTOsUFD2-anCmioTGlDO9ZdUAUdZHEQl5symJqLkC1QULReYavbPHGAg-rnxX3PPOSRFx7bsz-T4n14u9t0otMQW1rt5JwgB7nowvHrKXh5Y-TFgb8TYEX5682oceFWwhBcFQwMqcAAfsI85NUyN5PXtz5_yPdOkehxXEmy9IMEgh4BNn9893PWUs1y8pnoXMsCVuI2FBSDtKW7fYrXPvRC64LmRbNjg6AAAAAUk1uCEA")
+# You'll need a Pyrogram String Session for these vars. Generate String from our session generator bot 
+STRING1 = getenv("STRING_SESSION", None)
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
 STRING5 = getenv("STRING_SESSION5", None)
 
 
-#  __     ___    _ _  ___  _______   __  __ _    _  _____ _____ _____   ____   ____ _______
-#  \ \   / / |  | | |/ / |/ /_   _| |  \/  | |  | |/ ____|_   _/ ____| |  _ \ / __ \__   __|
-#   \ \_/ /| |  | | ' /| ' /  | |   | \  / | |  | | (___   | || |      | |_) | |  | | | |
-#    \   / | |  | |  < |  <   | |   | |\/| | |  | |\___ \  | || |      |  _ <| |  | | | |
-#     | |  | |__| | . \| . \ _| |_  | |  | | |__| |____) |_| || |____  | |_) | |__| | | |
-#     |_|   \____/|_|\_\_|\_\_____| |_|  |_|\____/|_____/|_____\_____| |____/ \____/  |_|
+
+████████╗██████╗░██╗░░██╗  ███╗░░░███╗██╗░░░██╗░██████╗██╗░█████╗░
+╚══██╔══╝██╔══██╗██║░░██║  ████╗░████║██║░░░██║██╔════╝██║██╔══██╗
+░░░██║░░░██████╦╝███████║  ██╔████╔██║██║░░░██║╚█████╗░██║██║░░╚═╝
+░░░██║░░░██╔══██╗██╔══██║  ██║╚██╔╝██║██║░░░██║░╚═══██╗██║██║░░██╗
+░░░██║░░░██████╦╝██║░░██║  ██║░╚═╝░██║╚██████╔╝██████╔╝██║╚█████╔╝
+░░░╚═╝░░░╚═════╝░╚═╝░░╚═╝  ╚═╝░░░░░╚═╝░╚═════╝░╚═════╝░╚═╝░╚════╝░
 
 
 ### DONT TOUCH or EDIT codes after this line
@@ -168,66 +169,66 @@ autoclean = []
 
 
 # Images
-START_IMG_URL = getenv("START_IMG_URL", "https://telegra.ph/file/dfb5ad5893ebc6ef81366.jpg")
+START_IMG_URL = getenv("START_IMG_URL", "https://te.legra.ph/file/ef0cce2646b2a30f128cc.jpg")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
-    "assets/Ping.jpeg",
+    "https://te.legra.ph/file/a4ca47f0b3937c44642b3.jpg",
 )
 
 PLAYLIST_IMG_URL = getenv(
     "PLAYLIST_IMG_URL",
-    "assets/Playlist.jpeg",
+    "https://te.legra.ph/file/ad1f7fb314b8b893a25d6.jpg",
 )
 
 GLOBAL_IMG_URL = getenv(
     "GLOBAL_IMG_URL",
-    "assets/Global.jpeg",
+    "https://te.legra.ph/file/1f6e25d1302a1bd28eb35.jpg",
 )
 
 STATS_IMG_URL = getenv(
     "STATS_IMG_URL",
-    "assets/Stats.jpeg",
+    "https://te.legra.ph/file/3c09a6ae3dc4e271aaf28.jpg",
 )
 
 TELEGRAM_AUDIO_URL = getenv(
     "TELEGRAM_AUDIO_URL",
-    "assets/Audio.jpeg",
+    "https://te.legra.ph/file/3c09a6ae3dc4e271aaf28.jpg",
 )
 
 TELEGRAM_VIDEO_URL = getenv(
     "TELEGRAM_VIDEO_URL",
-    "assets/Video.jpeg",
+    "https://te.legra.ph/file/62708c6c5d6a2890ec63c.jpg",
 )
 
 STREAM_IMG_URL = getenv(
     "STREAM_IMG_URL",
-    "assets/Stream.jpeg",
+    "https://te.legra.ph/file/bd995b032b6bd263e2cc9.jpg",
 )
 
 SOUNCLOUD_IMG_URL = getenv(
     "SOUNCLOUD_IMG_URL",
-    "assets/Soundcloud.jpeg",
+    "https://te.legra.ph/file/bb0ff85f2dd44070ea519.jpg",
 )
 
 YOUTUBE_IMG_URL = getenv(
     "YOUTUBE_IMG_URL",
-    "assets/Youtube.jpeg",
+    "https://te.legra.ph/file/b7347f15ad229b5745bee.jpg",
 )
 
 SPOTIFY_ARTIST_IMG_URL = getenv(
     "SPOTIFY_ARTIST_IMG_URL",
-    "assets/SpotifyArtist.jpeg",
+    "https://te.legra.ph/file/b70b6423922bd16323858.jpg",
 )
 
 SPOTIFY_ALBUM_IMG_URL = getenv(
     "SPOTIFY_ALBUM_IMG_URL",
-    "assets/SpotifyAlbum.jpeg",
+    "https://te.legra.ph/file/89aad4451af049426a553.jpg",
 )
 
 SPOTIFY_PLAYLIST_IMG_URL = getenv(
     "SPOTIFY_PLAYLIST_IMG_URL",
-    "assets/SpotifyPlaylist.jpeg",
+    "https://te.legra.ph/file/89aad4451af049426a553.jpg                              ",
 )
 
 
