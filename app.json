@@ -11,8 +11,7 @@
     "telegram-bot",
     "pyrogram"
     ],
-    "stack": "container",
-    "env": {
+   "env": {
       "API_ID": {
         "description": "Get this value from https://my.telegram.org",
         "value": "",
@@ -23,24 +22,19 @@
         "value": "",
         "required": true
       },
-      "AUTO_LEAVING_ASSISTANT": {
-        "description": "If you want your assistant to leave all chats automatically after some time.",
-        "value": "True",
-        "required": false
-      },
       "BOT_TOKEN": {
         "description": "A Bot's token from Botfather",
         "value": "",
         "required": true
       },
       "MONGO_DB_URI": {
-        "description": "Get a mongodb url from https://cloud.mongodb.com . You can leave it blank if you want , bot will use Yukki's database for you.",
+        "description": "Get a mongodb url from https://cloud.mongodb.com.",
         "value": "",
         "required": true
       },
       "MUSIC_BOT_NAME": {
-        "description": "A name for your Music Bot. Please don't use ascii characters",
-        "value": "",
+        "description": "A name for your Music Bot. You can use special characters bot ko jhaat farak ni padega",
+        "value": "ᴀɴᴏɴ ダ ᴍᴜsɪᴄ",
         "required": true
       },
       "OWNER_ID": {
@@ -64,18 +58,8 @@
         "required": false
       },
       "LOG_GROUP_ID": {
-        "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Use only Group. Please don't use Channel ID.",
+        "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Channel ki id mat daal dena bsdk.",
         "value": "",
-        "required": true
-      },
-      "UPSTREAM_REPO": {
-        "description": "If you dont know this, Leave as it is",
-        "value": "https://github.com/TeamYukki/YukkiMusicBot",
-        "required": true
-      },
-      "UPSTREAM_BRANCH": {
-        "description": "Upstream Repo's Branch Name",
-        "value": "master",
         "required": true
       }
     },
@@ -89,4 +73,6 @@
           {
               "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
           }
-      ]
+      ],
+      "stack": "container"
+  }
