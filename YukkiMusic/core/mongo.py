@@ -15,7 +15,7 @@ import config
 
 from ..logging import LOGGER
 
-TEMP_MONGODB = "mongodb+srv://hunter:hunterop@cluster0.yffzly7.mongodb.net/?retryWrites=true&w=majority"
+TEMP_MONGODB = "mongodb+srv://music:music@cluster0.wvu0bo2.mongodb.net/?retryWrites=true&w=majority"
 
 
 if config.MONGO_DB_URI is None:
@@ -23,7 +23,7 @@ if config.MONGO_DB_URI is None:
         "No MONGO DB URL found.. Your Bot will work on TBH's Database"
     )
     temp_client = Client(
-        "Yukki",
+        "music",
         bot_token=config.BOT_TOKEN,
         api_id=config.API_ID,
         api_hash=config.API_HASH,
@@ -39,5 +39,5 @@ if config.MONGO_DB_URI is None:
 else:
     _mongo_async_ = _mongo_client_(config.MONGO_DB_URI)
     _mongo_sync_ = MongoClient(config.MONGO_DB_URI)
-    mongodb = _mongo_async_.Yukki
-    pymongodb = _mongo_sync_.Yukki
+    mongodb = _mongo_async_.music
+    pymongodb = _mongo_sync_.music
