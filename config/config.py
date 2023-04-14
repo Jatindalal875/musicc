@@ -21,26 +21,26 @@ API_ID = int(getenv("API_ID", "19413864"))
 API_HASH = getenv("API_HASH", "9e33b9fdf4b840a508be5706104737eb")
 
 ## Get it from @Botfather in Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN", "5562514845:AAEyeafD0gcAgInwQj8v2WtUk-QtqNTDpv8")
+BOT_TOKEN = getenv("BOT_TOKEN", "")
 
 # Database to save your chats and stats... Get MongoDB:-  https://telegra.ph/How-To-get-Mongodb-URI-04-06
-MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://hunter:hunterop@cluster0.yffzly7.mongodb.net/?retryWrites=true&w=majority")
+MONGO_DB_URI = getenv("MONGO_DB_UR", "")
 
 # Custom max audio(music) duration for voice chat. set DURATION_LIMIT in variables with your own time(mins), Default to 60 mins.
 DURATION_LIMIT_MIN = int(
-    getenv("DURATION_LIMIT", "180000000000000000000000")
+    getenv("DURATION_LIMIT", "1800")
 )  # Remember to give value in Minutes
 
 # Duration Limit for downloading Songs in MP3 or MP4 format from bot
 SONG_DOWNLOAD_DURATION = int(
-    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "180000000000000000000000")
+    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "1800")
 )  # Remember to give value in Minutes
 
 # You'll need a Private Group ID for this.
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001821175020"))
 
 # A name for your Music bot.
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", "𝗧𝗕𝗛 ✦ 𝗠𝗨𝗦𝗜𝗖 ")
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME", " 𓆩᪵𝐌ᴇɴᴛᴀʟɪ𝐂🌿⃤𝐁𝐀𝐁𝐄𓆪̥")
 
 # Your User ID.
 OWNER_ID = list(
